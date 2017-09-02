@@ -1,0 +1,57 @@
+@import './../../theme/variables.scss';
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  min-height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  span {
+    position: relative;
+  }
+}
+
+.default {
+  &:hover {
+    span {
+      &:before {
+        display: block;
+      }
+    }
+  }
+
+  span {
+    &:before {
+      display: none;
+      position: absolute;
+      bottom: -10px;
+      content: ' ';
+      width: 100%;
+      border-bottom: 2px solid $additional-color;
+    }
+  }
+}
+
+.secondary {
+  min-width: 100px;
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: rgba($secondary-color, 0.9);
+  }
+
+  span {
+    color: $white;
+    font-size: 14px;
+  }
+}
+
+.icon {
+  &:hover {
+    opacity: 0.6;
+  }
+}

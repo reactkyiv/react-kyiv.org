@@ -1,0 +1,22 @@
+@import './theme/variables.scss';
+
+:global {
+  body {
+    min-width: 250px;
+  }
+
+  div, span, h1, h2, h3, h4, h5, h6, p,
+  blockquote, pre, a, abbr, address, big,
+  cite, code, del, em, ins, q, s, small,
+  strike, strong, sub, sup, tt, var, b, u, i,
+  center, dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend, table,
+  caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, figure,
+  figcaption, footer, header, hgroup, main, menu, nav,
+  output, ruby, section, summary, time, mark, audio, video {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: $primary-font-color;
+  }
+}

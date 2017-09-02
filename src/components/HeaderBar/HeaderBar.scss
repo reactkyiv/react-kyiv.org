@@ -1,0 +1,49 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+$HEADER_BAR_HEIGHT: 65px;
+$HEADER_BAR_SHADOW: $default-box-shadow;
+$HEADER_BORDER_COLOR: $default-border-color;
+$HEADER_DEFAULT_OFFSET: 10px;
+$HEADER_LOGO_SIZE: 36px;
+
+.headerBar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $HEADER_BORDER_COLOR;
+  box-shadow: $HEADER_BAR_SHADOW;
+  height: $HEADER_BAR_HEIGHT;
+  padding: 0 $HEADER_DEFAULT_OFFSET;
+}
+
+.leftSide, .rightSide {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: $HEADER_DEFAULT_OFFSET
+}
+
+.logoImg {
+  width: $HEADER_LOGO_SIZE;
+  height: $HEADER_LOGO_SIZE;
+}
+
+.mainActionButton {
+  margin-left: $HEADER_DEFAULT_OFFSET;
+}
+
+.mobile {
+  display: none;
+}
+
+@include mobile-only {
+  .mobile {
+    display: flex !important;
+  }
+
+  .rightSide:not(.mobile) {
+    display: none !important;
+  }
+}

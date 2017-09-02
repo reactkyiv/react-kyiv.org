@@ -1,0 +1,16 @@
+{
+  "extends": "hardcore-react",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "rules": {},
+  "parser": "babel-eslint",
+  "globals": {
+    "webpackIsomorphicTools": true,
+    "expect": true,
+    "jest": true
+  }
+}
