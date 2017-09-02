@@ -1,25 +1,25 @@
 {
-  "name": "react-redux-ssr-webpack2-example",
-  "description": "Example of an isomorphic (universal) webapp using react redux, ssr and hot reloading",
-  "author": "Faradey27 <andrii.tiertyshnyi@gmail.com> (http://github.com/faradey27)",
+  "name": "React Kyiv website",
+  "description": "React Kyiv website",
+  "author": "reactkyiv",
   "license": "MIT",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/faradey27/react-redux-ssr-webpack2-example"
+    "url": "https://github.com/reactkyiv/react-kyiv.org"
   },
-  "homepage": "https://github.com/faradey27/react-redux-ssr-webpack2-example",
+  "homepage": "https://github.com/reactkyiv/react-kyiv.org",
   "keywords": [
     "react",
     "isomorphic",
-    "universal",
     "webpack2",
     "ssr",
     "server side",
     "hot reloading",
     "redux",
     "starter",
-    "boilerplate"
+    "boilerplate",
+    "reactkyiv"
   ],
   "main": "bin/server.js",
   "scripts": {
