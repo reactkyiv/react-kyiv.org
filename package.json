@@ -1,0 +1,23 @@
+{
+  "name": "reactkyiv.com",
+  "version": "1.0.0",
+  "description": "React Kyiv website",
+  "main": "index.js",
+  "repository": "reactkyiv.com",
+  "author": "React Kyiv Organizers",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^4.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-loader": "^1.9.0"
+  }
+}
