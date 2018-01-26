@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment, Component } from 'react';
+import Link from 'next/link';
 import cx from 'classnames';
 import shader from 'shader';
 
@@ -6,32 +7,49 @@ import Icon from '../Icon';
 
 import variables from '../../styles/variables';
 
-export default ({ inverted, label, to, point }) => {
-    return (
-        <div>
-            <a href={to}>
-                {label} {point && <Icon type="arrowRight" />}
-            </a>
-            <style jsx>{`
-                a {
-                    font-size: ${variables.fontSizeBody}px;
-                    font-weight: ${variables.fontWeightSemiBold};
-                    letter-spacing: 0.1em;
-                    color: ${inverted ? variables.colors.fontContrast : variables.colors.fontBase};
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                    display: ${point && 'inline-flex'}
-                }
+const isLinkExternal = link => link.includes('http');
 
-                a:hover {
-                    color: ${variables.colors.fontSecondary};
-                }
+export default class LinkButton extends Component {
+    renderLink = () => {
+        const { to, point, label, inverted } = this.props;
 
-                a:active {
-                    color: ${variables.colors.primary};
-                }
-            `}</style>
-        </div>
-    )
+        return (
+            <Fragment>
+                <a href={to}>
+                    {label} {point && <Icon type="arrowRight" />}
+                </a>
+
+                <style jsx>{`
+                    a {
+                        font-size: ${variables.fontSizeBody}px;
+                        font-weight: ${variables.fontWeightSemiBold};
+                        letter-spacing: 0.1em;
+                        color: ${inverted ? variables.colors.fontContrast : variables.colors.fontBase};
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        text-transform: uppercase;
+                        display: ${point && 'inline-flex'}
+                        padding: 8px;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                    }
+
+                    a:active {
+                    }
+                `}</style>
+            </Fragment>
+        );
+    }
+
+    render() {
+        const { inverted, to, point } = this.props;
+
+        return (
+            isLinkExternal(to)
+            ? this.renderLink()
+            : <Link href={to}>{this.renderLink()}</Link>
+        );
+    }
 }

@@ -8,7 +8,7 @@ const Title = ({ inverted, children, level }) => {
 
     return (
         <Fragment>
-            <Heading className={Heading}>
+            <Heading>
                 {children}
             </Heading>
             <style jsx global>{`

@@ -10,6 +10,7 @@ export default ({ children }) => {
         <div>
             <Head>
                 <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&amp;subset=latin-ext" rel="stylesheet" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <div>{children}</div>
             <style jsx global>{`
