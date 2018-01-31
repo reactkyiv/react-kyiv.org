@@ -4,7 +4,7 @@ export default {
         secondary: '#3A376D',
         black: '#000000',
         white: '#ffffff',
-        grey: '#ffffff',
+        grey: '#EEEEEE',
         fontBase: '#191919',
         fontContrast: '#FDFDFD',
         fontSecondary: '#AFAFAF'

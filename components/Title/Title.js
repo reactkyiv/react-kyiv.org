@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import Head from 'next/head';
 
+import cx from 'classnames';
+
 import variables from '../../styles/variables';
 
 const Title = ({ inverted, children, level }) => {
@@ -8,12 +10,16 @@ const Title = ({ inverted, children, level }) => {
 
     return (
         <Fragment>
-            <Heading>
+            <Heading className={cx({inverted})}>
                 {children}
             </Heading>
             <style jsx global>{`
+                .inverted {
+                    color: ${variables.colors.fontContrast};
+                }
+
                 h1, h2, h3 {
-                    color: ${inverted ? variables.colors.fontContrast : variables.colors.fontBase};
+                    color: ${variables.colors.fontBase};
                 }
 
                 h1 {

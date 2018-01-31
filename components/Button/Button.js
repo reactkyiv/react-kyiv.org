@@ -37,7 +37,7 @@ export default ({ label, cta }) => {
                 .cta {
                     color: ${variables.colors.fontBase};                    
                     box-shadow: 5px 5px 0 ${variables.colors.primary};
-                    background-color: ${variables.colors.white};              
+                    background-color: ${variables.colors.white};
                 }
 
                 .cta:hover {

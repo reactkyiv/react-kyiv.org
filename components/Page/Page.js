@@ -16,6 +16,7 @@ export default ({ children }) => {
             <style jsx global>{`
                 body {
                     font-family: 'Poppins', sans-serif;
+                    width: 100%;
                 }
 
                 html, body {
