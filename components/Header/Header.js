@@ -19,7 +19,8 @@ export default ({ children }) => {
             </div>
             <style jsx>{`
                 .header {
-                    width: 100vw;
+                    width: 100%;
+                    max-width: ${variables.pageMaxWidth};
                     position: fixed;
                     padding: 16px;
                     display: flex;
@@ -27,6 +28,7 @@ export default ({ children }) => {
                     align-items: center;
                     top: 0;
                     box-sizing: border-box;
+                    padding: 0 64px;
                 }
 
                 .links {

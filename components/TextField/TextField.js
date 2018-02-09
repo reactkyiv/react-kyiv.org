@@ -15,7 +15,7 @@ export default ({ value, placeholder, fullWidth }) => {
             />
             <style jsx global>{`
                 .input {
-                    width: ${fullWidth ? '100%' : '220px'};
+                    width: ${fullWidth ? '100%' : '320px'};
                     padding: 16px;
                     font-size: ${variables.fontSizeBody}px;
                     letter-spacing: 0.1em;

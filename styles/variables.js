@@ -17,4 +17,6 @@ export default {
     fontWeightBase: 400,
     fontWeightSemiBold: 600,
     fontWeightBold: 700,
+
+    pageMaxWidth: '1200px'
 };

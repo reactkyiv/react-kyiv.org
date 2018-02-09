@@ -15,16 +15,20 @@ export default class LinkButton extends Component {
 
         return (
             <Fragment>
-                <a href={to}>
+                <a href={to} className={cx({inverted})}>
                     {label} {point && <Icon type="arrowRight" />}
                 </a>
 
                 <style jsx>{`
+                    .inverted {
+                        color: ${variables.colors.fontContrast};
+                    }
+
                     a {
                         font-size: ${variables.fontSizeBody}px;
                         font-weight: ${variables.fontWeightSemiBold};
                         letter-spacing: 0.1em;
-                        color: ${inverted ? variables.colors.fontContrast : variables.colors.fontBase};
+                        color: ${variables.colors.fontBase};
                         cursor: pointer;
                         transition: all 0.3s ease;
                         text-transform: uppercase;
@@ -44,7 +48,7 @@ export default class LinkButton extends Component {
     }
 
     render() {
-        const { inverted, to, point } = this.props;
+        const { to, point } = this.props;
 
         return (
             isLinkExternal(to)

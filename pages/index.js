@@ -15,7 +15,9 @@ import TextField from '../components/TextField';
 export default () => {
     return (
         <Page>
-            <Header />
+            <Container>
+                <Header />
+            </Container>
             <div className="hero">
                 <Container>
                     <div className="inner">
@@ -43,7 +45,7 @@ export default () => {
                     </div>
                 </div>
             </Container>
-            <div className="newsletter_background">
+            <div className="newsletter_container">
                 <Container>
                     <div className="newsletter">
                         <Title level={2} inverted>
@@ -54,6 +56,26 @@ export default () => {
                             <TextField />
                             <div className="spacer" />
                             <Button cta label="Submit" />
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <div className="support-us">
+                <div className="support-us_image" />
+                <Container>
+                    <div className="support-us_container">
+                        <div className="support-us_title">
+                            <Title inverted>
+                                Support us
+                            </Title>
+                        </div>
+                        <div className="support-us_text-container">
+                            <p className="support-us_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis esse natus, modi minus maxime vero quo aperiam maiores expedita.</p>
+                            <div className="support-us_links">
+                                <LinkButton to="" point label="Support us on patreon" />
+                                <LinkButton to="" point label="Buy some swag in our shop" />
+                                <LinkButton to="" point label="Become a sponsor" />
+                            </div>
                         </div>
                     </div>
                 </Container>
@@ -76,7 +98,6 @@ export default () => {
 
                 .inner {
                     padding: 0 64px;
-                    width: 100%;
                 }
 
                 .motto {
@@ -106,7 +127,7 @@ export default () => {
                     background-color: ${variables.colors.grey};
                 }
 
-                .newsletter_background {
+                .newsletter_container {
                     background-color: ${variables.colors.secondary};
                 }
 
@@ -121,6 +142,63 @@ export default () => {
 
                 .subscription_input {
                     display: flex;
+                }
+
+                .support-us {
+                    max-width: 2000px;
+                    height: 600px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+
+                .support-us_container {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 64px;
+                }
+
+                .support-us_title {
+                    width: 50%;
+                }
+
+                .support-us_text-container {
+                    width: 50%;
+                    padding: 32px 24px;                    
+                }
+
+                .support-us_text {
+                    padding: 0 16px 32px 16px;
+                }
+
+                .support-us_links {
+                    height: 150px;
+                    padding-left: 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+
+                .support-us_image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 100%;
+                    background-image: url('https://camo.mybb.com/e01de90be6012adc1b1701dba899491a9348ae79/687474703a2f2f7777772e6a71756572797363726970742e6e65742f696d616765732f53696d706c6573742d526573706f6e736976652d6a51756572792d496d6167652d4c69676874626f782d506c7567696e2d73696d706c652d6c69676874626f782e6a7067');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    z-index: -1; //maybe temporary
+                }
+
+                .support-us_image:before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    position: absolute;
+                    background-color: rgba(58, 55, 109, 0.55);
                 }
             `}</style>
         </Page>

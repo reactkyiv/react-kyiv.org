@@ -8,9 +8,9 @@ const Container = ({ children }) => {
             {children}
             <style jsx>{`
                 .base {
-                    max-width: 1200px;
+                    max-width: ${variables.pageMaxWidth};
                     width: 100%;
-                    margin: 0 auto;                    
+                    margin: 0 auto;
                 }
             `}</style>
         </div>

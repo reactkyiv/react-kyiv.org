@@ -24,6 +24,7 @@ const Title = ({ inverted, children, level }) => {
 
                 h1 {
                     font-size: 52px;
+                    margin: 32px 0;
                 }
 
                 h2 {

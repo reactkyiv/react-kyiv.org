@@ -2,13 +2,15 @@ import React from 'react';
 import cx from 'classnames';
 import shader from 'shader';
 
+import Icon from '../Icon';
+
 import variables from '../../styles/variables';
 
-export default ({ label, cta }) => {
+export default ({ label, cta, point }) => {
     return (
         <div>
             <button className={cx('button', { cta })}>
-                {label}
+                {label} {point && <Icon type="arrowRight" />}
             </button>
             <style jsx>{`
                 .button {

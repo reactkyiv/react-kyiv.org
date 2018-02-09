@@ -17,6 +17,7 @@ export default ({ children }) => {
                 body {
                     font-family: 'Poppins', sans-serif;
                     width: 100%;
+                    overflow-x: hidden;
                 }
 
                 html, body {

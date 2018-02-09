@@ -15,6 +15,7 @@ const Icon = ({ size, type }) => {
             <style jsx>{`
                 svg {
                     fill: currentColor;
+                    vertical-align: middle;
                 }
             `}</style>
         </Fragment>
@@ -22,7 +23,7 @@ const Icon = ({ size, type }) => {
 }
 
 Icon.defaultProps = {
-    size: 24
+    size: 16
 };
 
 export default Icon;
